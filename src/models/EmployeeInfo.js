@@ -46,3 +46,5 @@ const employeesInfo = [{
     sms: "",
     email: ""
 }]
+
+module.exports = employeesInfo

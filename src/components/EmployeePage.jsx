@@ -1,10 +1,21 @@
 import Header from "./Header"
-import { employeesInfo } from "./models/EmployeeInfo"
 
-function EmployeePage() {
+function EmployeePage(props) {
+
+    const vp = Object.keys(props.employeeData).map((key, index) => {
+        return (
+            <div>
+                <h4 key={index}>
+                    {key}: {props.employeeData[key]}
+                </h4>
+            </div>            
+        )
+    })
+
     return (
         <div className="employeepage">
-            <Header />
+            <Header title="Employee" />
+            {vp}
         </div>
     );
 }
